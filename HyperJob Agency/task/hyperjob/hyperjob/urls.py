@@ -16,8 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from hyperjob.views import IndexView
+from resume.views import ResumeView
+from vacancy.views import VacancyView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('resumes', ResumeView.as_view()),
+    path('vacancies', VacancyView.as_view()),
     path('', IndexView.as_view())
 ]
