@@ -116,7 +116,7 @@ class HyperJobTest(DjangoTest):
                 'INSERT INTO auth_user '
                 '(`id`, `username`, `email`, `is_staff`, `password`, `is_superuser`, '
                 '`first_name`, `last_name`, `is_active`, `date_joined`) '
-                'VALUES (?, ?, ?, ?, "", false, "", "", true, datetime())',
+                'VALUES (?, ?, ?, ?, "", 0, "", "", 1, datetime())',
                 INITIAL_USERS[:len(INITIAL_VACANCIES)]
             )
             cursor.executemany(
